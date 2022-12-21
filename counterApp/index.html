@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,8 +11,10 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
 
+  
+
   <title>
-        Counting App for two genders.
+        Counting App for two groups.
     </title>
   </head>
 
@@ -18,25 +22,26 @@
   <main>
 
   <body>
-    <script src="index.js"></script>
+    
 
   <h1 id="title">
-    PEOPLE COUNTING APP
+    ALL PURPOSE DUAL COUNTING APP
   </h1>
 
-  <section id="top-screen">
+  <section class="top-screen">
             <div class="men-screen">
-                <h1 id="men"> MEN </h1>
-                <h1 id="men-count" contenteditable="true">400</h1>
-                <p id="previous-men-count"> Previous counts:</p>
+                <h1 id="men" contenteditable="true"> MEN </h1>
+                <h1 id="men-count" >
+                    0</h1>
+                <p id="previous-men-count"> Previous counts: </p>
             
             </div>
 
 
             <div class="women-screen">
-                <h1 id="womemen"> WOMEN </h1>
-                <h1 id="women-count">3</h1>
-                <p id="previous-women-count"> Previous counts:</p> 
+                <h1 id="womemen" contenteditable="true"> WOMEN </h1>
+                <h1 id="women-count">0</h1>
+                <p id="previous-women-count"> Previous counts: </p> 
             </div>
   </section>
 
@@ -44,19 +49,19 @@
   <hr>
   <section>
             <div class="increment-btns">
-                <button id="men-increase-btn" onclick=""> Increase</button>
-                <button id="women-increase-btn" onclick=""> Increase</button>
+                <button id="men-increase-btn" onclick="incrementMen()"> Increase</button>
+                <button id="women-increase-btn" onclick="incrementWomen()"> Increase</button>
 
             </div>
 
             <div class="save-btn">
-                <button id="Save-men-women-btn" onclick=""> Save</button>
+                <button id="Save-men-women-btn" onclick="save()"> Save</button>
                 
             </div>
 
             <div class="decrement-btns">
-                <button id="men-decrease-btn" onclick=""> Decrease</button>
-                <button id="women-decrease-btn" onclick=""> Decrease</button>
+                <button id="men-decrease-btn" onclick="decreaseMen()"> Decrease</button>
+                <button id="women-decrease-btn" onclick="decreaseWomen()"> Decrease</button>
             </div>
 
   </section>
@@ -69,16 +74,16 @@
                 <div class="total">
                         <div id="men-total"> 
                             <fieldset>
-                                <legend>Total Men</legend>
-                                <h1 id="men-total-count"> 44 </h1>
+                                <legend contenteditable="true">Total Men</legend>
+                                <h1 id="men-total-count"> 0 </h1>
                             </fieldset>
                         </div> 
 
                 
                         <div id="women-total">
                             <fieldset>
-                                <legend>Total Women</legend>
-                                <h1 id="women-total-count"> 33 </h1>
+                                <legend contenteditable="true">Total Women</legend>
+                                <h1 id="women-total-count"> 0 </h1>
                             </fieldset>
                             
                         
@@ -89,8 +94,8 @@
                 <br>
                 <div id="men-and-women-total">
                         <fieldset>
-                            <legend>Total men and women</legend>
-                            <h1 id="men-and-women-total-count"> 104 </h1>
+                            <legend contenteditable="true">Total men and women</legend>
+                            <h1 id="men-and-women-total-count"> 0 </h1>
                         </fieldset>
                 </div>
 
@@ -101,13 +106,15 @@
 
  <section>
         
-                <h1> REMARKS</h1>
-                <textarea id="remarks" type="text" placeholder="e.g last count was lady in red" > </textarea>
+                <h1> COMMENTS</h1>
+                <textarea id="remarks" type="text" > </textarea>
             
         
 
 
- </section>       
+ </section>  
+ 
+ <script src="index.js"></script>     
   
   </body>
 
